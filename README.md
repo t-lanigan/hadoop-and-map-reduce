@@ -34,6 +34,51 @@ If running the whole bash script takes too long, Individual mapper and reducer c
 
 Look inside the bash script file to get a list of all the commands used.
 
+
+## Explaination of Projects
+
+### Project 1
+
+Question 1: 
+What is the value of total sales for the following categories?
+	- Toys
+	- Consumer Electronics
+
+Question 2:
+Find the monetary value for the highest individual sale for each separate store.
+
+What are the values for the following stores?
+	- Reno
+	- Toledo
+	- Chandler
+
+Question 3:
+1. Find
+	- Total sales value across all the stores
+	- Total number of sales
+
+### Project 2
+
+Question 1:
+Write a MapReduce program which will display the number of hits for each different file on the Web site.
+
+Find
+	- How many hits were made to the page: /assets/js/the-associates.js?
+
+Question 2:
+Find
+	- How many hits were made by the IP address: 10.99.99.186?
+
+Question 3:
+Find the most popular file on the Web site. In other words, the file which had the most hits. The reducer should just write out the name of the file and number of hits into HDFS.
+
+Find
+	- Full path to the most popular file?
+	- Number of hits to that file?
+
+
+
+
 ## License
 Copyright &copy; 2016 Tyler Lanigan.<br>
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
