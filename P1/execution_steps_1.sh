@@ -4,6 +4,23 @@
 shopt -s expand_aliases
 source ~/.bashrc
 
+# The 'hs' alias from the .basrc file in the virtual machine is as
+# follows:
+# run_mapreduce() {
+#         hadoop jar 
+#				 /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar 
+#				 -mapper $1 
+#				 -reducer $2 
+#				 -file $1 
+#				 -file $2 
+#				 -input $3 
+#				 -output $4
+# }
+
+# alias hs=run_mapreduce
+
+# The amount of mappers and reducers can be edited through the hs alias
+
 hadoop fs -rm -r purchases_p1
 hadoop fs -rm -r purchases_p1q1
 hadoop fs -rm -r purchases_p1q2
