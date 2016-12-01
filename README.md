@@ -83,18 +83,11 @@ The 'hs' alias from the .basrc file in the virtual machine is as
 follows:<br>
 
 ```
-run_mapreduce() {<br>
-        hadoop jar <br>
-				 /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/<br>hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar <br>
-				 -mapper $1 <br>
-				 -reducer $2 <br>
-				 -file $1<br> 
-				 -file $2 <br>
-				 -input $3 <br>
-				 -output $4<br>
-}<br>
+run_mapreduce() {
+	hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -mapper $1 -reducer $2 -file $1 -file $2 -input $3 -output $4
+}
 
-alias hs=run_mapreduce<br>
+alias hs=run_mapreduce
 ```
 
 The amount of mappers and reducers can be edited through the `hs` alias
