@@ -100,12 +100,14 @@ The amount of mappers and reducers can be edited through the `hs` alias
 
 Add the following to the .bashrc file in the home directory on the VM.
 
-```run_mapreduce_with_combiner() {
+```
+run_mapreduce_with_combiner() {
 	hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -mapper $1 -reducer $2 -combiner $2 -file $1 -file $2 -input $3 -output $4
 }
 
 
-alias hsc=run_mapreduce_with_combiner```
+alias hsc=run_mapreduce_with_combiner
+```
 
 The copy settings for the VM should be set to bidirectional to copy and paste from a local to a remote VM.
 
