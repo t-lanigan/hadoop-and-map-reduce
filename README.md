@@ -1,4 +1,4 @@
-# Introduction to Hadoop and MapReduce
+# Hadoop and MapReduce
 ----------
 
 ## Introduction
@@ -110,8 +110,5 @@ The copy settings for the VM should be set to bidirectional to copy and paste fr
 The above command will use the same reducer.py file as the reducer on the output of each mapper. With the combiners, running map reduce will be faster. When there is a large amount of data, it is sometimes nessesary to have a combiners pre-reduction step. Running map reduce with a combiner on p1q1 results in hadoop completing the job in 192s. With only the reducer and mapper, the same job is completed in 242s. This difference is significant!
 
 
-## License
-Copyright &copy; 2016 Tyler Lanigan<br>
-Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 
