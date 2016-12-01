@@ -31,6 +31,8 @@ If running the whole bash script takes too long, Individual mapper and reducer c
 
 Look inside the bash script file to get a list of all the commands used.
 
+To increase performance, see the notes below for use of combiners with the mappers and reducers.
+
 To observe the in progress jobs, go to localhost:50030 on your web brower in the virtual machine.
 
 ## Explaination of Projects
@@ -93,3 +95,25 @@ run_mapreduce() {<br>
 alias hs=run_mapreduce<br>
 
 The amount of mappers and reducers can be edited through the `hs` alias
+
+## Adding Combiners
+
+Add the following to the .bashrc file in the home directory on the VM.
+
+```run_mapreduce_with_combiner() {
+	hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -mapper $1 -reducer $2 -combiner $2 -file $1 -file $2 -input $3 -output $4
+}
+
+
+alias hsc=run_mapreduce_with_combiner```
+
+The copy settings for the VM should be set to bidirectional to copy and paste from a local to a remote VM.
+
+The above command will use the same reducer.py file as the reducer on the output of each mapper. With the combiners, running map reduce will be faster. When there is a large amount of data, it is sometimes nessesary to have a combiners pre-reduction step. Running map reduce with a combiner on p1q1 results in hadoop completing the job in 192s. With only the reducer and mapper, the same job is completed in 242s. This difference is significant!
+
+
+## License
+Copyright &copy; 2016 Tyler Lanigan<br>
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+
