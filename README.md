@@ -2,29 +2,37 @@
 ----------
 
 ## Introduction
-This repository contains source code for the assignments of Udacity's course, [Introduction to Hadoop and MapReduce](https://www.udacity.com/course/ud617), which was unveiled on 15th November, 2013.<br>
+This repository contains source code for the assignments of Udacity's course, [Introduction to Hadoop and MapReduce](https://www.udacity.com/course/ud617), which was unveiled on 15th November, 2013.
 
-The exercises have been done in both Python using `Hadoop Streaming` and Java.
+The exercises have been done in Python using Hadoop Streaming.
 
 ## Instructions for Virtual Machine download and setup
-Please refer [instructions document](IntroductiontoHadoopandMapreduce-VMsetup.doc) provided by Course Instructors for details on the Hadoop Virtual Machine [VM henceforth] setup required for running these examples.<br>
-As mentioned in the above document, VM image with Hadoop installed and preconfigured, can be downloaded from [Udacity CDN](http://content.udacity-data.com/courses/ud617/Cloudera-Udacity-Training-VM-4.1.1.c.zip). 
+Please refer [instructions document](https://docs.google.com/document/d/1v0zGBZ6EHap-Smsr3x3sGGpDW-54m82kDpPKC2M6uiY/pub) provided by Course Instructors for details on the Hadoop Virtual Machine (VM) setup required for running these examples.
 
-Credentials to login to this Virtual Machine are: `training` / `training`. You will not need `root` access for any of the assignments of this Course. But just in case if you need, the password for `root` is `training`.
+As mentioned in the above document, the VM image with Hadoop installed and preconfigured, can be downloaded from [Udacity CDN](http://content.udacity-data.com/courses/ud617/Cloudera-Udacity-Training-VM-4.1.1.c.zip). The VM includes the data used in the project, however alternative links to download the data are given in the instructional document.
+
+Credentials to login to this Virtual Machine are: `training` / `training`. Just in case if you need it, the password for `root` is `training`.
 
 Please ensure that you configure the VM to at least 1.5 GB of RAM in [VMware Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/6_0).
 
+
 ## Instructions to interact with Virtual Machine
 
-From the terminal, the virtual machine can be accesses by using:
+From the terminal, the virtual machine can be accessed using `ssh`
 
-`ssh 
+To find the address, go to the virtual machine consol and type ifconfig. For more instructions please see this [link.](https://docs.google.com/document/d/1MZ_rNxJhR4HCU1qJ2-w7xlk2MTHVqa9lnl_uj-zRkzk/pub). To exit, simply type `exit`. The VM will also need to have a 'Bridged Connection' setting for its network settings.
 
+File can be copied back and forth easily using `scp` or `sftp`. The mains commands used in sftp are `put <file>`, to place the file in the present working directory to the remote; and `get <file>` to download the file form the remote to the local. Refer to the help menu for sftp for further instructions.
 
+## Instructions for use of code
 
+Using sftp, copy the P1 and P2 folders to udacity_training/code and run the bash scripts execution_steps_1.sh and execution_steps_2.sh respectively. In order to copy a entire folder to a remote, first a folder with the same name (e.g P1) must be created in the remote. This can be done using `mkdir` in the sftp interactive shell.
 
+If running the whole bash script takes too long, Individual mapper and reducer combinations can be run using:
 
+>`hs <mapper.py> <reducer.py> <input folder> <output folder>
 
+Look inside the bash script file to get a list of all the commands used.
 
 ## License
 Copyright &copy; 2016 Tyler Lanigan.<br>
