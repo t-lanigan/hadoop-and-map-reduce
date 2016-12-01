@@ -7,22 +7,19 @@ This repository contains source code for the assignments of Udacity's course, [I
 The exercises have been done in Python using Hadoop Streaming.
 
 ## Instructions for Virtual Machine download and setup
-Please refer [instructions document](https://docs.google.com/document/d/1v0zGBZ6EHap-Smsr3x3sGGpDW-54m82kDpPKC2M6uiY/pub) provided by Course Instructors for details on the Hadoop Virtual Machine (VM) setup required for running these examples.
+Refer to the [instructions document](https://docs.google.com/document/d/1v0zGBZ6EHap-Smsr3x3sGGpDW-54m82kDpPKC2M6uiY/pub) provided by Course Instructors for details on the Hadoop Virtual Machine (VM) setup required for running these examples.
 
-As mentioned in the above document, the VM image with Hadoop installed and preconfigured, can be downloaded from [Udacity CDN](http://content.udacity-data.com/courses/ud617/Cloudera-Udacity-Training-VM-4.1.1.c.zip). The VM includes the data used in the project, however alternative links to download the data are given in the instructional document.
+As mentioned in the instructions, the VM image with Hadoop installed and preconfigured, can be downloaded from [Udacity CDN](http://content.udacity-data.com/courses/ud617/Cloudera-Udacity-Training-VM-4.1.1.c.zip). The VM includes the data used in the project, however alternative links to download the data are given in the instructions.
 
-Credentials to login to this Virtual Machine are: `training` / `training`. Just in case if you need it, the password for `root` is `training`.
-
-Please ensure that you configure the VM to at least 1.5 GB of RAM in [VMware Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/6_0).
-
+To login to this Virtual Machine, the password and username are: `training` / `training`. Just in case if you need it, the password for `root` is `training`.
 
 ## Instructions to interact with Virtual Machine
 
-From the terminal, the virtual machine can be accessed using `ssh`
+From the terminal, the virtual machine can be accessed using `ssh training@address`
 
 To find the address, go to the virtual machine consol and type ifconfig. For more instructions please see this [link](https://docs.google.com/document/d/1MZ_rNxJhR4HCU1qJ2-w7xlk2MTHVqa9lnl_uj-zRkzk/pub). To exit, simply type `exit`. The VM will also need to have a 'Bridged Connection' setting for its network settings.
 
-File can be copied back and forth easily using `scp` or `sftp`. The mains commands used in sftp are `put <file>`, to place the file in the present working directory to the remote; and `get <file>` to download the file form the remote to the local. Refer to the help menu for sftp for further instructions.
+File can be copied back and forth easily using `scp` or `sftp`. The mains commands used in sftp are: `put <file>`, to place the file in the present working directory to the remote; and `get <file>` to download the file form the remote to the local. Refer to the help menu for sftp for further instructions.
 
 ## Instructions for use of code
 
