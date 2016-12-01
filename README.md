@@ -42,21 +42,21 @@ To observe the in progress jobs, go to localhost:50030 on your web brower in the
 
 Question 1:<br> 
 What is the value of total sales for the following categories?<br>
-	* Toys<br>
-	* Consumer Electronics<br>
+* Toys<br>
+* Consumer Electronics<br>
 
 Question 2:<br>
 Find the monetary value for the highest individual sale for each separate store.<br>
 
 What are the values for the following stores?
-	* Reno<br>
-	* Toledo<br>
-	* Chandler<br>
+* Reno<br>
+* Toledo<br>
+* Chandler<br>
 
 Question 3:<br>
 1. Find:<br>
-	* Total sales value across all the stores<br>
-	* Total number of sales<br>
+* Total sales value across all the stores<br>
+* Total number of sales<br>
 
 ### Project 2
 
@@ -64,18 +64,18 @@ Question 1:<br>
 Write a MapReduce program which will display the number of hits for each different file on the Web site.<br>
 
 Find:<br>
-	* How many hits were made to the page: /assets/js/the-associates.js?<br>
+* How many hits were made to the page: /assets/js/the-associates.js?<br>
 
 Question 2:<br>
 Find:<br>
-	* How many hits were made by the IP address: 10.99.99.186?<br>
+* How many hits were made by the IP address: 10.99.99.186?<br>
 
 Question 3:<br>
 Find the most popular file on the Web site. In other words, the file which had the most hits. The reducer should just write out the name of the file and number of hits into HDFS.<br>
 
 Find:<br>
-	* Full path to the most popular file?
-	* Number of hits to that file?
+* Full path to the most popular file?
+* Number of hits to that file?
 
 
 
