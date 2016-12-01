@@ -20,7 +20,7 @@ Please ensure that you configure the VM to at least 1.5 GB of RAM in [VMware Pla
 
 From the terminal, the virtual machine can be accessed using `ssh`
 
-To find the address, go to the virtual machine consol and type ifconfig. For more instructions please see this [link.](https://docs.google.com/document/d/1MZ_rNxJhR4HCU1qJ2-w7xlk2MTHVqa9lnl_uj-zRkzk/pub). To exit, simply type `exit`. The VM will also need to have a 'Bridged Connection' setting for its network settings.
+To find the address, go to the virtual machine consol and type ifconfig. For more instructions please see this [link](https://docs.google.com/document/d/1MZ_rNxJhR4HCU1qJ2-w7xlk2MTHVqa9lnl_uj-zRkzk/pub). To exit, simply type `exit`. The VM will also need to have a 'Bridged Connection' setting for its network settings.
 
 File can be copied back and forth easily using `scp` or `sftp`. The mains commands used in sftp are `put <file>`, to place the file in the present working directory to the remote; and `get <file>` to download the file form the remote to the local. Refer to the help menu for sftp for further instructions.
 
@@ -30,55 +30,52 @@ Using sftp, copy the P1 and P2 folders to udacity_training/code and run the bash
 
 If running the whole bash script takes too long, Individual mapper and reducer combinations can be run using:
 
->`hs <mapper.py> <reducer.py> <input folder> <output folder>
+>`hs mapper.py reducer.py input_folder output folder
 
 Look inside the bash script file to get a list of all the commands used.
 
+To observe the in progress jobs, go to localhost:50030 on your web brower in the virtual machine.
 
 ## Explaination of Projects
 
 ### Project 1
 
-Question 1: 
-What is the value of total sales for the following categories?
-	- Toys
-	- Consumer Electronics
+Question 1:<br> 
+What is the value of total sales for the following categories?<br>
+	- Toys<br>
+	- Consumer Electronics<br>
 
-Question 2:
-Find the monetary value for the highest individual sale for each separate store.
+Question 2:<br>
+Find the monetary value for the highest individual sale for each separate store.<br>
 
 What are the values for the following stores?
-	- Reno
-	- Toledo
-	- Chandler
+	- Reno<br>
+	- Toledo<br>
+	- Chandler<br>
 
-Question 3:
-1. Find
-	- Total sales value across all the stores
-	- Total number of sales
+Question 3:<br>
+1. Find:<br>
+	- Total sales value across all the stores<br>
+	- Total number of sales<br>
 
 ### Project 2
 
-Question 1:
-Write a MapReduce program which will display the number of hits for each different file on the Web site.
+Question 1:<br>
+Write a MapReduce program which will display the number of hits for each different file on the Web site.<br>
 
-Find
-	- How many hits were made to the page: /assets/js/the-associates.js?
+Find:<br>
+	- How many hits were made to the page: /assets/js/the-associates.js?<br>
 
-Question 2:
-Find
-	- How many hits were made by the IP address: 10.99.99.186?
+Question 2:<br>
+Find:<br>
+	- How many hits were made by the IP address: 10.99.99.186?<br>
 
-Question 3:
-Find the most popular file on the Web site. In other words, the file which had the most hits. The reducer should just write out the name of the file and number of hits into HDFS.
+Question 3:<br>
+Find the most popular file on the Web site. In other words, the file which had the most hits. The reducer should just write out the name of the file and number of hits into HDFS.<br>
 
-Find
+Find:<br>
 	- Full path to the most popular file?
 	- Number of hits to that file?
 
 
 
-
-## License
-Copyright &copy; 2016 Tyler Lanigan.<br>
-Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
